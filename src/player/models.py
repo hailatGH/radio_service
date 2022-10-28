@@ -21,6 +21,10 @@ class RadioStationModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    def get_passstation_frequency_for_es(self):
+        string_frequency = str(self.station_frequency)
+        return string_frequency
+
     def __str__(self):
         return f"{self.pk}: {self.station_name}"
 
