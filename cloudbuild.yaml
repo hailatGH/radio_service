@@ -30,7 +30,7 @@ steps:
       - '--'
       - 'python'
       - 'manage.py'
-      - 'makemigrations'
+      - 'make migrations'
     id: Make migrations
 
   # 3. Migrate
