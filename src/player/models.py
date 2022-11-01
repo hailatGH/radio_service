@@ -4,7 +4,6 @@ from django.core.files import File
 from PIL import Image, ImageOps
 from io import BytesIO
 from core import validators
-from core.compress_images import CompressedImageField
 
 def Station_Cover_Images(instance, filename):
     return '/'.join(['Media_Files', 'Station_Cover_Images', str(instance.station_name) + "_" + str(filename)])
