@@ -28,6 +28,16 @@ class RadioStationModel(models.Model):
     def __str__(self):
         return f"{self.pk}: {self.station_name}"
 
+    def save(self, *args, **kwargs):
+        image = Image.open(self.station_cover)
+        image = image.convert('RGB')
+        image = ImageOps.exif_transpose(image)
+        image_io = BytesIO()
+        image.save(image_io, "JPEG", optimize=True, quality=20)
+        compressed_image = File(image_io, name=str(self.station_cover))
+        self.station_cover = compressed_image
+        super(RadioStationModel, self).save(*args, **kwargs)
+
 class FavouritesModel(models.Model):
 
     class Meta:
