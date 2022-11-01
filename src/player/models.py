@@ -35,7 +35,7 @@ class RadioStationModel(models.Model):
         image = image.convert('RGB')
         image = ImageOps.exif_transpose(image)
         image_io = BytesIO()
-        image.save(image_io, "JPEG", optimize=True, quality=20)
+        image.save(image_io, "JPEG", optimize=True, quality=50)
         compressed_image = File(image_io, name=str(self.station_cover))
         self.station_cover = compressed_image
         super(RadioStationModel, self).save(*args, **kwargs)
