@@ -7,7 +7,7 @@ django.utils.encoding.force_text = force_str
 ALLOWED_HOSTS = [
     "radio-service.calmgrass-743c6f7f.francecentral.azurecontainerapps.io"]
 CSRF_TRUSTED_ORIGINS = [
-    "https://radio-service.calmgrass-743c6f7f.francecentral.azurecontainerapps.io/*"]
+    "https://radio-service.calmgrass-743c6f7f.francecentral.azurecontainerapps.io/"]
 
 DATABASES = {
     'default': {
