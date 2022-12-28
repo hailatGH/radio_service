@@ -9,8 +9,8 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /requirements.txt && \
     /py/bin/python manage.py makemigrations && \
-    /py/bin/python manage.py makemigrations player && \
-    /py/bin/python manage.py migrate player && \
+    /py/bin/python manage.py makemigrations radio && \
+    /py/bin/python manage.py migrate radio && \
     /py/bin/python manage.py migrate --run-syncdb
 # /py/bin/python manage.py collectstatic --no-input
 

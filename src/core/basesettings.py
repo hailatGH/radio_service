@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django_elasticsearch_dsl',
 
     'core',
-    'player',
+    'radio',
 ]
 
 
@@ -171,7 +171,7 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 
-ELASTIC_HOST_KEY= f"https://elastic:OOPjLQHlFr2CPkO5FCD5YIzm@kinmusic.es.europe-west1.gcp.cloud.es.io:9243"
+ELASTIC_HOST_KEY = f"https://elastic:OOPjLQHlFr2CPkO5FCD5YIzm@kinmusic.es.europe-west1.gcp.cloud.es.io:9243"
 # ELASTIC_HOST_KEY= f"https://elastic:iBDoYGCEeBHcjhtGPPo0rrI1@kin-music-search-577dcc.es.europe-west1.gcp.cloud.es.io:9243"
 
 ELASTICSEARCH_DSL = {

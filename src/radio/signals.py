@@ -20,7 +20,7 @@ def update_document(sender, **kwargs):
     model_name = sender._meta.model_name
     instance = kwargs['instance']
 
-    if app_label == 'player':
+    if app_label == 'radio':
         # If it is `books.Publisher` that is being updated.
         if model_name == 'RadioStationModel':
             instances = instance.RadioStationModel.all()
@@ -39,7 +39,7 @@ def delete_document(sender, **kwargs):
     model_name = sender._meta.model_name
     instance = kwargs['instance']
 
-    if app_label == 'player':
+    if app_label == 'radio':
         # If it is `booksl.Publisher` that is being updated.
         if model_name == 'RadioStationModel':
             instances = instance.all()
