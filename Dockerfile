@@ -11,8 +11,8 @@ RUN python -m venv /py && \
     /py/bin/python manage.py makemigrations && \
     /py/bin/python manage.py makemigrations radio && \
     /py/bin/python manage.py migrate radio && \
-    /py/bin/python manage.py migrate --run-syncdb
-# /py/bin/python manage.py collectstatic --no-input
+    /py/bin/python manage.py migrate --run-syncdb && \
+    /py/bin/python manage.py collectstatic --no-input
 
 ENV PATH="/py/bin:$PATH"
 ENV PYTHONDONTWRITEBYTECODE 1
